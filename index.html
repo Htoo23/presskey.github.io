@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Detect Pressed Key</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <div class="box">
+        <p class="text">Press any key</p>
+        <div class="content">
+            <div class="key-code">16</div>
+            <div class="key-name">SHIFT</div>
+            <div class="details">
+                <p class="key">Key:<span></span></p>
+                <p class="code">Code:<span></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const box=document.querySelector(".box");
+        document.addEventListener("keydown",e =>{
+            box.querySelector(".key-code").innerText=e.keyCode;
+            box.querySelector(".key-name").innerText=e.key;
+            box.querySelector(".key span").innerText=e.key;
+            box.querySelector(".code span").innerText=e.keyCode;
+            box.classList.add("active");
+            console.log(e);
+
+        });
+    </script>
+    
+</body>
+</html>
